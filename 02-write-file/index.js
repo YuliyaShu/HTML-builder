@@ -7,12 +7,10 @@ process.on('SIGINT', () => {
   process.exit();
 });
 process.stdin.on('data', data => {
-    
   if (data.toString().trim() == 'exit') {
     process.stdout.write('Пока!');
     process.exit();
   } else {
-    // process.stdin.pipe(out);
     out.write(data.toString());
     process.on('SIGINT', () => {
       process.stdout.write('Пока!');
@@ -20,6 +18,7 @@ process.stdin.on('data', data => {
     });
   }
 });
+console.log(path.join(__dirname, './text.txt'))
 
   
   
