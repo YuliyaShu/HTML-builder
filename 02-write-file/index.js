@@ -18,7 +18,7 @@ process.stdin.on('data', data => {
     });
   }
 });
-console.log(path.join(__dirname, './text.txt'))
+console.log(path.join(__dirname, './text.txt'));
 
   
   

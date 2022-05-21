@@ -5,7 +5,7 @@ fs.readdir(pathFiles, { withFileTypes: true }, (err, files) => {
   if (err)
     console.log(err);
   else {
-    console.log("\nSecret-folder filenames:");
+    console.log('\nSecret-folder filenames:');
     files.forEach(file => {
       if (!file.isDirectory()) {
         fs.stat(path.join(pathFiles, file.name), (err, stats) => {
