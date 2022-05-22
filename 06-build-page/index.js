@@ -147,7 +147,7 @@ const builder = {
       const pathToFile = path.join(pathToBundle, './index.html');
       fs.exists(pathToFile, (exist) => {
         if (exist)    {
-          fs.truncate(pathToFile, () => {if (err) console.error(err);}) 
+          fs.truncate(pathToFile, () => {if (err) console.error(err);});
           fs.createWriteStream(pathToFile);
           fs.appendFile(pathToFile, data, () => {
             if (err) console.log(err);
@@ -187,5 +187,6 @@ const builder = {
       });
     });
   },
+  
 };
 builder.createFolder();
